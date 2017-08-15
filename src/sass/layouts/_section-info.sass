@@ -1,0 +1,55 @@
+.section-info
+  padding: rem-calc(30) rem-calc(10)
+  margin-top: rem-calc(60)
+
+  img
+    border-radius: 50%
+
+  ul
+    position: relative
+
+    &:before
+      content: url("../../images/stamp.png")
+      position: absolute
+      right: rem-calc(-15)
+      bottom: rem-calc(-28)
+      animation-name: pulse
+      animation-delay: 2.5s
+      animation-duration: 0.5s
+      opacity: 0
+      animation-fill-mode: forwards
+
+    li
+      font-size: rem-calc(12)
+      font-weight: 700
+      color: $list-color
+      text-transform: uppercase
+      border-bottom: 2px solid $list-border-color
+      margin-bottom: rem-calc(30)
+      padding-bottom: rem-calc(10)
+      line-height: 1
+
+      &:last-child
+        margin-bottom: 0
+
+  @media (max-width: 640px)
+    margin-top: 0
+    img
+      display: block
+      margin-right: auto
+      margin-left: auto
+
+
+@-webkit-keyframes pulse
+  0%
+    opacity: 0
+
+  10%
+    opacity: .5
+    transform-origin: 50% 50%
+    transform:  scale(5)
+    transition: all .3s cubic-bezier(0.6, 0.04, 0.98, 0.335)
+
+  100%
+    opacity: 1
+    transform:  scale(1)

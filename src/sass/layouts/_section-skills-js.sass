@@ -1,0 +1,52 @@
+//.chart-gauge
+//  width: 400px
+//  margin: 10px auto
+.section-skills-js
+  padding: rem-calc(50) rem-calc(10)
+
+  h2
+    font-size: rem-calc(18)
+    margin-bottom: rem-calc(20)
+
+  .chart-color1
+    fill: $yellow
+
+  .chart-color2
+    fill: $green
+
+  .chart-color3
+    fill: $blue
+
+  .needle,
+  .needle-center
+    fill: #464A4F
+
+  .js-count
+    font-size: rem-calc(50)
+    color: $blue
+    font-weight: 600
+    line-height: 1
+
+    &:after
+      content: '%'
+
+  @media (max-width: 640px)
+    svg
+      display: block
+      margin-right: auto
+      margin-left: auto
+      height: rem-calc(150)
+
+    h2,
+    .js-count
+      display: inline-block
+
+    .js-count
+      float: right
+
+  @media (max-width: 370px)
+    .count-wrap
+      text-align: center
+
+    .js-count
+      float: none

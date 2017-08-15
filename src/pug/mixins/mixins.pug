@@ -1,2 +1,24 @@
 include svg-icon.pug
 include title.pug
+
+mixin list-info(...items)
+    ul
+        each item in items
+            li= item
+
+mixin list-checkbox(...items)
+    ul
+        each item in items
+
+            if item == "ANGULAR" || item == "VANILLAJS"
+                li
+                    input.checkbox(id=item type="checkbox" not-checked)
+                    label(for=item)= item
+
+            else
+                li
+                    input.checkbox(id=item type="checkbox" checked)
+                    label(for=item)= item
+
+
+

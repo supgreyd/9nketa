@@ -1,6 +1,9 @@
 *
   box-sizing: border-box
 
+body
+  background-color: $background-color
+
 .icon
   display: inline-block
   vertical-align: middle
@@ -28,3 +31,19 @@
 .container
   margin: 0 auto
   max-width: $global-width
+
+.section-info,
+.section-skills,
+.section-skills-js
+  background-image: url("../../images/background.png")
+  max-width: rem-calc(800)
+  margin-bottom: rem-calc(2)
+  max-height: rem-calc(250)
+
+  @media (max-width: 640px)
+    max-height: 100%
+
+ul
+  list-style-type: none
+  margin: 0
+  padding: 0

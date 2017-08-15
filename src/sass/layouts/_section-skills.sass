@@ -1,0 +1,65 @@
+.section-skills
+  padding: rem-calc(35) rem-calc(10)
+
+  h2
+    font-size: rem-calc(18)
+    margin-bottom: rem-calc(20)
+
+  li
+    position: relative
+    margin-bottom: rem-calc(35)
+    &:last-child
+      margin-bottom: 0
+
+  .checkbox
+    vertical-align: top
+    margin-right: 3px
+    width: 20px
+    height: 20px
+
+    &+ label
+      cursor: pointer
+      font-size: rem-calc(12)
+      font-weight: 700
+      color: $list-color
+
+    &:not(checked)
+      position: absolute
+      opacity: 0
+
+    &:not(checked) + label
+      padding-left: 20px
+
+      &:before
+        content: ''
+        position: absolute
+        top: 4px
+        left: 0
+        width: 20px
+        height: 20px
+        border-radius: 5px
+        background-color: $background-color
+
+    &:checked + label:after
+      content: url("../../images/checked.png")
+      height: 20px
+      width: 20px
+      position: absolute
+      left: 4px
+      top: 4px
+
+    &:checked + label:before
+      background-color: $blue
+
+  @media (max-width: 640px)
+    h2
+      text-align: center
+
+    li
+      text-align: center
+      margin-bottom: rem-calc(20)
+      &:last-child
+        margin-bottom: rem-calc(20)
+
+    .checkbox:checked+label:after
+      left: 0
